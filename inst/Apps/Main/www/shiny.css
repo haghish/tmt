@@ -1,0 +1,73 @@
+/* This is necessary so that an empty verbatimTextOutput slot
+is the same height as a non-empty one (only important when
+* placeholder = TRUE) */
+
+/* create a fixed class for adding the logo */
+.fixed {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 203px;
+    height:25px;
+    margin: 12px;
+    background-image: url("umg.png");
+}
+
+
+.navbar {
+  background: transparent;
+  font-weight:bold;
+  border-bottom-width:5px;
+}
+
+
+.navbar, .container-fluid {
+
+    /*
+    margin:0px;
+    padding:0;
+    */
+}
+
+/* menubar name
+.navbar-brand {
+    font-size:10px;
+}
+*/
+
+/* EDIT THE FIRST NAV ONLY */
+
+/*
+body > nav {
+    font-weight:bold;
+    color:blue;
+    height:5px;
+    line-height:5px;
+    background: transparent;
+}
+*/
+
+
+
+/* EDIT THE SECOND NAV ONLY */
+/*
+div > nav {
+
+    margin:-15px;
+    margin-top:-20px;
+    font-family:monospace;
+    font-size:15px;
+
+}
+*/
+
+/*
+nav {
+    font-size:12px;
+    padding:0;
+    margin:0;
+    line-height:0;
+}
+*/
+
+
