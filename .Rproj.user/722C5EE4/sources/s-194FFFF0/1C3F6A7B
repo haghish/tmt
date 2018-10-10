@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539160214066.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1C3F6A7B",
+    "lastKnownWriteTime" : 1539181074,
+    "last_content_update" : 1539181074971,
+    "path" : "~/GitHub/tmt/R/seo.norm.R",
+    "project_path" : "R/seo.norm.R",
+    "properties" : {
+        "cursorPosition" : "75,0",
+        "scrollLine" : "57",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
