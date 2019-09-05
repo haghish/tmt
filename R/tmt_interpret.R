@@ -1,4 +1,9 @@
 
+#' @title interprets the TMT results
+#' @param test character. the name of the test. this name is only
+#'             used in the shiny app for interpreting the results
+#' @param norm the normative data. currently only \code{"tombaugh"} is implemented
+#' @param score the score of the test
 #' @export
 
 tmt_interpret = function(test=NULL, norm = "tombaugh", score=NULL) {

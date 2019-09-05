@@ -1,12 +1,12 @@
 Package: tmt
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Normative Interpretation Of The TMT Test And A Shiny Application For Visualizing The TMT Test
+Version: 1.0
+Author: E. F. Haghish
+Maintainer: E. F. Haghish <haghish@med.uni-goettingen.de>
+Description: The tmt package provides a function for normative interpretation of the tmt test as well as a shiny application that can interpret the test.
+License: MIT + file LICENSE
 Encoding: UTF-8
+Imports: shiny 
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

@@ -1,12 +1,43 @@
 
 #' @title tombaugh.norm
-#' @description the normative data are taken from: Tombaugh, T. N. (2004). Trail Making Test A and B: normative data stratified by age and education. Archives of Clinical Neuropsychology, 19(2), 203–214.
+#' @description the normative data are taken from: Tombaugh, T. N. (2004).
+#'              Trail Making Test A and B: normative data stratified by age and education.
+#'              Archives of Clinical Neuropsychology, 19(2), 203–214.
+#' @param age integer. subjects age in number of years
+#' @param education integer. level of education
+#' @param tmtA integer. the score of the TMT part A
+#' @param tmtB integer. the score of TMT part B
 #' @export
 
 tombaugh.norm <- function(age=NULL, education=NULL, tmtA=NULL, tmtB=NULL) {
 
-  # Syntax evaluation
+  # Vector processing
   # ========================================================
+  if (length(age) > 1 | length(tmtA) > 1 | length(tmtB) > 1) {
+    if (!is.null(tmtA)) {
+      if (length(tmtA) != age) {
+        stop("length of tmtA is not equal to the age length")
+      }
+    }
+    if (!is.null(tmtB)) {
+      if (length(tmtB) != age) {
+        stop("length of tmtB is not equal to the age length")
+      }
+    }
+
+    results = rep(NA, length(age))
+    for (i in 1:length(age)) {
+      results[i] = tombaugh.norm(age=age[i], education=education[i],
+                                 tmtA=tmtA[i], tmtB = tmtB[i])
+    }
+    return(results)
+  }
+
+
+  # Scalar processing
+  # ========================================================
+
+  # Syntax evaluation
   if (!is.null(tmtA) & !is.null(tmtB)) {
     stop("tmtA and tmtB cannot be used together")
   }
@@ -19,7 +50,7 @@ tombaugh.norm <- function(age=NULL, education=NULL, tmtA=NULL, tmtB=NULL) {
   else education = 1
 
   # Creating the normative data set for score evaluation
-  # ==========================================================
+  # --------------------------------------------------------
   norm = data.frame(Age=integer(), Education = integer(),
                     A90=integer(),
                     A80=integer(),

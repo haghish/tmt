@@ -4,8 +4,20 @@
 \alias{tombaugh.norm}
 \title{tombaugh.norm}
 \usage{
-tombaugh.norm(age = NULL, education = NULL, tmtA = NULL, tmtB = NULL)
+tombaugh.norm(age = NULL, education = NULL, tmtA = NULL,
+  tmtB = NULL)
+}
+\arguments{
+\item{age}{integer. subjects age in number of years}
+
+\item{education}{integer. level of education}
+
+\item{tmtA}{integer. the score of the TMT part A}
+
+\item{tmtB}{integer. the score of TMT part B}
 }
 \description{
-the normative data are taken from: Tombaugh, T. N. (2004). Trail Making Test A and B: normative data stratified by age and education. Archives of Clinical Neuropsychology, 19(2), 203–214.
+the normative data are taken from: Tombaugh, T. N. (2004).
+             Trail Making Test A and B: normative data stratified by age and education.
+             Archives of Clinical Neuropsychology, 19(2), 203–214.
 }

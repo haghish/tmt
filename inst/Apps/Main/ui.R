@@ -44,12 +44,12 @@ shinyUI(
                        value=NA, step=1),
           numericInput("tmtB", "TMT-B time:", min=20, max=500,
                        value=NA, step=1),
-          hr(),
-          selectInput("inSelect", "Select input:",
-                      c("label 1" = "option1",
-                        "label 2" = "option2")),
-          hr(),
-          downloadButton('export', label = "Download PDF")
+          hr() #,
+          #selectInput("inSelect", "Select input:",
+          #            c("label 1" = "option1",
+          #              "label 2" = "option2")),
+          #hr(),
+          #downloadButton('export', label = "Download PDF")
 
         ),
         mainPanel(

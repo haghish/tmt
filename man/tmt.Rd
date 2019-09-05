@@ -7,5 +7,5 @@
 tmt()
 }
 \description{
-runs the tmt app
+runs the tmt shiny app
 }

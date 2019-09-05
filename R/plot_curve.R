@@ -1,10 +1,28 @@
-
+#' @title plot_curve
+#' @description draws the TMT plot in the shiny app
+#' @param v this argument is automatically specified by the
+#'          Shiny app
+#' @param norm the normative data. currently, only \code{"tombaugh"}
+#'             is implemented
+#' @param test character. This argument is specified by the
+#'             shiny app automatically
+#' @importFrom graphics curve polygon abline axis
+#' @importFrom stats dnorm
 #' @export
+#' @importFrom grDevices topo.colors
+#' @importFrom utils globalVariables
+
 
 plot_curve = function(v=NULL, norm="tombaugh", test=NULL) {
 
+  #x = globalVariables(x)
+
+  FUN = function(x) {
+    dnorm(x,50,15)
+  }
+
   if (norm == "tombaugh") {
-    curve(dnorm(x,50,15),xlim=c(4,96),
+    curve(FUN,xlim=c(4,96),
           main=paste(test,'normative analysis based on Tombaugh (2004) norms'),
           xlab = "relative performance (from low 10% to top 90%)",
           ylab = "", yaxt='n',
@@ -55,7 +73,7 @@ plot_curve = function(v=NULL, norm="tombaugh", test=NULL) {
 
 
     # brewing color for continious color filling
-    library(RColorBrewer)
+    #library(RColorBrewer)
     # plotclr <- brewer.pal(10,"YlOrRd")
     plotclr = rev(topo.colors(10, alpha = .5))
     # plotclr = rainbow(10, alpha = .5)
@@ -72,7 +90,7 @@ plot_curve = function(v=NULL, norm="tombaugh", test=NULL) {
     polygon(cord.x9,cord.y9,col=plotclr[9], border = NA )
     polygon(cord.x10,cord.y10,col=plotclr[10], border = NA )
 
-    curve(dnorm(x,50,15),xlim=c(4,96),
+    curve(FUN,xlim=c(4,96),
           lwd = 1,
           add = TRUE)
 

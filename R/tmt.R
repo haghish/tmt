@@ -1,14 +1,15 @@
 
 #' @title tmt
-#' @description runs the tmt app
+#' @description runs the tmt shiny app
+# @importFrom shiny runApp
+#' @importFrom  shiny runApp
 #' @export
 
 tmt <- function() {
 
-  suppressPackageStartupMessages({
-    require(shiny)
-    require(shinyjs)
-  })
+  #suppressPackageStartupMessages({
+  #  requireNamespace(shiny)
+  #})
 
 
   path = system.file("Apps/Main/", "server.R", package="tmt")

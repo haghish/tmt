@@ -8,7 +8,7 @@ suppressPackageStartupMessages({
   # library(rmarkdown)
 
   # for exporting pdf?
-  library(gridExtra)
+  #library(gridExtra)
 })
 
 # ----------------------------------------------------------
